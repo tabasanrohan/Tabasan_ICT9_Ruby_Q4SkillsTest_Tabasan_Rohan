@@ -8,7 +8,7 @@
 <script>
 function login() {
     let user = document.getElementById("username").value;
-    let pass = document.getElementById("password").value;
+   let pass = document.getElementById("password").value;
 
     if(user === "admin" && pass === "1234") {
         alert("Login successful!");
@@ -21,7 +21,7 @@ function login() {
 <style>
 body {
 background-image: url('https://i.pinimg.com/736x/bd/bf/07/bdbf0779c1cb8b9ddb28a1eb6f07f91f.jpg');
-background-repeat: no-repeat;
+    background-repeat: no-repeat;
 background-size: cover;
 font-family: Helvetica;
 }
@@ -30,7 +30,7 @@ font-family: Helvetica;
 .login-box {
     max-width: 400px;
   margin: 100px auto;
-    padding: 30px;
+ padding: 30px;
     border-radius: 15px;
  background: white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -53,7 +53,7 @@ display: none;
 <div id="loginPage" class="login-box text-center">
     <h2>Login</h2>
 
-    <input type="text" id="username" class="form-control mb-3" placeholder="Username">
+ <input type="text" id="username" class="form-control mb-3" placeholder="Username">
     <input type="password" id="password" class="form-control mb-3" placeholder="Password">
 
     <button class="btn btn-primary" onclick="login()">Login</button>
