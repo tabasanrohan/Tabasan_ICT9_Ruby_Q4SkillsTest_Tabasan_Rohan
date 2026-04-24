@@ -11,7 +11,7 @@ body {
     background: #eef2f7;
 }
 
-/* Notebook cards */
+
 .card {
     border-radius: 12px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
@@ -21,42 +21,56 @@ body {
 
 <body>
 
-<!-- NOTEBOOK PAGE -->
 <div id="notebookPage" class="container mt-5">
 
     <h1 class="text-center mb-4">My Notebooks</h1>
 
     <div class="row">
 
-        <!-- Notebook 1 -->
+
         <div class="col-md-4">
             <div class="card p-3">
-                <h4>Filipino</h4>
+         <h4>Filipino</h4>
                 <p>Teacher: Ms. Francisco</p>
-                <button class="btn btn-success" onclick="openNotebook('Filipino')">Open</button>
+             <button class="btn btn-success" onclick="openNotebook('Filipino')">Open</button>
             </div>
         </div>
 
-        <!-- Notebook 2 -->
         <div class="col-md-4">
             <div class="card p-3">
-                <h4>English</h4>
+          <h4>English</h4>
                 <p>Teacher: Ms. Avila</p>
-                <button class="btn btn-success" onclick="openNotebook('English')">Open</button>
+           <button class="btn btn-success" onclick="openNotebook('English')">Open</button>
             </div>
         </div>
 
-        <!-- Notebook 3 -->
         <div class="col-md-4">
             <div class="card p-3">
                 <h4>Math</h4>
-                <p>Teacher: Mr. Verba</p>
+      <p>Teacher: Mr. Verba</p>
+                <button class="btn btn-success" onclick="openNotebook('Math')">Open</button>
+            </div>
+        </div>
+
+            <div class="col-md-4">
+            <div class="card p-3">
+                <h4>Science</h4>
+      <p>Teacher: Ms. Mendaro</p>
+                <button class="btn btn-success" onclick="openNotebook('Math')">Open</button>
+            </div>
+        </div>
+
+
+
+            <div class="col-md-4">
+            <div class="card p-3">
+                <h4>ICT</h4>
+      <p>Teacher: Mr. Santos</p>
                 <button class="btn btn-success" onclick="openNotebook('Math')">Open</button>
             </div>
         </div>
 
     </div>
-
     <div class="row mt-4">
         <div class="col text-center">
             <button class="btn btn-primary" onclick="countSubjects()">Show Subjects</button>
