@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q4 Drill 2</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background-image:url('https://i.pinimg.com/1200x/cb/f8/d2/cbf8d2376052a3c7ae4749d6b1c7c20c.jpg');
+    background-size:cover;
+  background-attachment:fixed; font-family:Helvetica;
+    color:white;
+}
+
+.container-box{
+    background:#292603e4;
+ width:700px;
+margin:70px auto;
+    padding:40px;
+    border-radius:30px;
+}
+
+input{
+    margin-bottom:20px;
+}
+
+.btn-warning{
+font-weight:bold;
+}
+
+details{
+width:700px;
+margin:20px auto;
+    color:white;
+    font-family:Helvetica;
+}
+
+a{
+    color:skyblue;
+}
+</style>
+</head>
+<body>
+
+
+<div class="container-box">
+<h1 class="text-warning">Heat Index Checker</h1>
+
+<label>Degree in C</label>
+<input type="number" id="temp" class="form-control" placeholder="Input degree value">
+<label>Humidity Percentage</label>
+<input type="number" id="humid" class="form-control" placeholder="Input percentage value">
+
+<button class="btn btn-warning" onclick="checkHeat()">Check</button>
+
+<h3 class="mt-4" id="result"></h3>
+
+<hr>
+
+
+<script>
+
+
+function checkHeat(){
+
+let temperature = Number(document.getElementById("temp").value);
+let humidity = Number(document.getElementById("humid").value);
+let heatIndex = temperature + (0.33 * humidity) - 4;
+
+    let status = "";
+    if(heatIndex <= 27){
+        status = "Comfortable / Cool";
+    }
+    else if(heatIndex <= 32){
+     status = "Warm";
+    }
+    else if(heatIndex <= 37){
+        status = "Hot";
+ }
+    else if(heatIndex <= 41){
+        status = "Very Hot";
+    }
+    else{
+        status = "Extreme Heat";
+    }
+
+    document.getElementById("result").innerHTML =
+    "Heat Index: " + heatIndex.toFixed(2) + "°C - " + status;
+
+alert(status);
+}
+</script>
+
+</body>
+</html>
